@@ -2,18 +2,30 @@ import styled, { keyframes } from "styled-components";
 import { fadeIn, zoomIn } from "react-animations";
 import Header from "./Header";
 
-// Styled-components
+/**
+ * Animations for styled-components
+ */
 const fadeInAnimations = keyframes`${fadeIn}`;
 const zoomInAnimations = keyframes`${zoomIn}`;
 
+/**
+ * Component that applies a fade-in animation
+ */
 const FadeInDiv = styled.div`
   animation: 4s ${fadeInAnimations};
 `;
 
+/**
+ * Component that applies a zoom-in animation
+ */
 const ZoomInDiv = styled.div`
   animation: 3s ${zoomInAnimations};
 `;
 
+/**
+ * About component that describes professional experience, skills, and contact info.
+ * @returns JSX Element
+ */
 function About() {
   return (
     <div className="about">
