@@ -1,0 +1,265 @@
+@use "./global" as *;
+// About styles
+.about {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    background-color: $background-about;
+    color: #FFF;
+
+    .about__container {
+        .about__presentation {
+            font-family: "Futura_Light";
+
+            .about__title {
+                font-family: "Futura_Medium";
+                position: relative;
+                z-index: 1;
+
+                &::after {
+                    content: "À propos";
+                    color: #5A5A5A;
+                    z-index: -1;
+                    bottom: 15px;
+                    position: relative;
+                    opacity: 0.3;
+                }
+            }
+
+            .about__text {
+                line-height: 35px;
+                margin-top: 45px;
+
+                &:first-of-type {
+                    margin-top: 65px;
+                }
+            }
+        }
+
+        .about__skills,
+        .about__contact {
+            margin-top: 100px;
+
+            .about__skills-title,
+            .about__contact-title {
+                font-family: "Futura_Medium";
+                position: relative;
+                font-size: 30px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -15px;
+                    left: 0;
+                    right: 0;
+                    border-top: 5px solid #FFF;
+                    width: 70px;
+                }
+            }
+
+            .about__list-skills {
+                margin-top: 50px;
+
+                &:first-of-type {
+                    margin-top: 60px;
+                }
+
+                .about__list-title {
+                    font-family: "Futura_Light";
+                    margin-bottom: 15px;
+                }
+
+                div {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: flex-start;
+
+                    p {
+                        font-family: "Futura_Medium";
+                        display: inline;
+                        padding: 10px;
+                        margin: 10px;
+                        background: #FFF;
+                        color: $background-about;
+                    }
+                }
+
+            }
+        }
+
+        .about__contact {
+            margin-bottom: 65px;
+
+            .about__contact-sentence {
+                font-family: "Futura_Light";
+                margin-top: 60px;
+                line-height: 35px;
+            }
+
+            .about__contact-info {
+                font-family: "Futura_Light";
+                font-size: 18px;
+                margin-top: 20px;
+
+                p {
+                    padding-left: 50px;
+                    position: relative;
+                }
+
+                p::before {
+                    content: url('../img/envelope.svg');
+                    width: 28px;
+                    height: 28px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                }
+
+                .about__linkedin {
+                    text-decoration: none;
+                    position: relative;
+                    padding-left: 50px;
+                    display: block;
+                    margin-top: 35px;
+                    color: #FFF;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    &:active,
+                    &:visited,
+                    &:focus {
+                        text-decoration: none;
+                        border: none;
+                        outline: none;
+                        color: #FFF;
+                    }
+
+                    &::before {
+                        content: url('../img/linkedin-logo.svg');
+                        width: 28px;
+                        height: 28px;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about__to-works {
+    @include button-navigation;
+}
+
+// Bigger than 1200
+@media (min-width: $desktop-screen) {
+    .about__container {
+        width: 800px;
+        margin: 130px auto 100px auto;
+    }
+
+    .about__title {
+        font-family: "Futura_Medium";
+        font-size: 60px;
+
+        &::after {
+            font-size: 70px;
+            right: 225px;
+
+        }
+    }
+
+    .about__text,
+    .about__list-title,
+    .about__contact-sentence {
+        font-size: 20px;
+    }
+}
+
+// Beetween tablet and desktop
+@media (min-width: $inter-screen) and (max-width: $desktop-screen) {
+    .about__container {
+        width: 70%;
+        margin: 130px auto 100px auto;
+    }
+
+    .about__title {
+        font-family: "Futura_Medium";
+        font-size: 60px;
+
+        &::after {
+            font-size: 45px;
+            right: 220px;
+        }
+    }
+
+    .about__text,
+    .about__list-title,
+    .about__contact-sentence {
+        font-size: 20px;
+    }
+}
+
+// Beetween smartphone and tablet
+@media (max-width: $inter-screen) {
+    .about__container {
+        width: 85%;
+        margin: 55px auto 100px auto;
+    }
+
+    .about__title {
+        font-family: "Futura_Medium";
+        font-size: 45px;
+
+        &::after {
+            font-size: 40px;
+            right: 165px;
+        }
+    }
+
+    .about__text,
+    .about__list-title,
+    .about__contact-sentence {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 410px) {
+
+    .about__title {
+        font-family: "Futura_Medium";
+        font-size: 45px;
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
+
+@media (max-width: $smartphone-screen) {
+    .about__container {
+        width: 85%;
+        margin: 130px auto 100px auto;
+    }
+
+    .about__title {
+        font-family: "Futura_Medium";
+        font-size: 35px;
+
+        &::after {
+            font-size: 30px;
+        }
+    }
+
+    .about__text,
+    .about__list-title,
+    .about__contact-sentence {
+        font-size: 16px;
+    }
+}

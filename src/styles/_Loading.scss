@@ -1,0 +1,47 @@
+@use "./global" as *;
+// Loading styles
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+
+    .loading__container {
+        color: #fff;
+        text-align: center;
+    }
+
+    .loading__instruction {
+        font-family: "Futura_Light";
+        font-size: 25px;
+        text-align: center;
+    }
+}
+
+// Bigger than 1200
+@media (min-width: $desktop-screen) {
+    .loading__logo {
+        width: 280px;
+    }
+}
+
+// Beetween tablet and desktop
+@media (min-width: $tablet-screen) and (max-width: $desktop-screen) {
+    .loading__logo {
+        width: 280px;
+    }
+}
+
+// Beetween smartphone and tablet
+@media (max-width: $tablet-screen) {
+    .loading__logo {
+        width: 280px;
+    }
+}
+
+@media (max-width: $smartphone-screen) {
+    .loading__logo {
+        width: 150px;
+    }
+}

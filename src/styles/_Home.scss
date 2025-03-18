@@ -1,0 +1,45 @@
+@use "./global" as *;
+// Home style
+.home {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #181818;
+
+    .home__to-about {
+        @include button-navigation;
+        position: fixed;
+        top: 75%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+    }
+}
+
+// Beetween tablet and desktop
+@media (min-width: $inter-screen) and (max-width: $desktop-screen) {
+    .home__to-about {
+        font-size: 18px;
+    }
+}
+
+// Beetween smartphone and tablet
+@media (max-width: $inter-screen) {
+    .home__to-about {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 410px) {
+    .home__to-about {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: $smartphone-screen) {
+    .home__to-about {
+        font-size: 13px;
+    }
+}

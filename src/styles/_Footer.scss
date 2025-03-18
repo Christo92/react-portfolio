@@ -1,0 +1,41 @@
+@use "./global" as *;
+
+// Footer styles
+
+.footer {
+    position: fixed;
+    bottom: 45px;
+    left: 45px;
+
+    .footer__copyright {
+        color: #FFF;
+        font-family: "Futura_Book";
+    }
+}
+
+// Bigger than 1200
+@media (min-width: $desktop-screen) {
+    .footer__copyright {
+        font-size: 16px;
+    }
+}
+
+// Beetween tablet and desktop
+@media (min-width: $tablet-screen) and (max-width: $desktop-screen) {
+    .footer__copyright {
+        font-size: 16px;
+    }
+}
+
+// Beetween smartphone and tablet
+@media (max-width: $tablet-screen) {
+    .footer__copyright {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: $smartphone-screen) {
+    .footer__copyright {
+        font-size: 12px;
+    }
+}

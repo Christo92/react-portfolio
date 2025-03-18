@@ -1,0 +1,62 @@
+@use "./global" as *;
+// TyperWritter style
+.typewritter {
+  color: #FFF;
+  font-family: "Futura_Light";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+
+  // .typewritter__sentences {
+  //     font-size: 48px;
+  // }
+}
+
+// Animation of text
+.react-rotating-text-cursor {
+  animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+}
+
+@keyframes blinking-cursor {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+// Bigger than 1200
+@media (min-width: $desktop-screen) {
+  .typewritter__sentences {
+    font-size: 50px;
+  }
+}
+
+
+// Beetween tablet and desktop
+@media (min-width: $tablet-screen) and (max-width: $desktop-screen) {
+  .typewritter__sentences {
+    font-size: 31px;
+  }
+}
+
+// Beetween smartphone and tablet
+@media (max-width: $tablet-screen) {
+  .typewritter__sentences {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: $smartphone-screen) {
+  .typewritter__sentences {
+    font-size: 15px;
+  }
+}
