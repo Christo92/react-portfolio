@@ -75,7 +75,9 @@ function About() {
                 <p>CSS/SASS</p>
                 <p>BEM</p>
                 <p>Material UI</p>
+                <p>Tailwind CSS</p>
                 <p>React JS</p>
+                <p>Next.js</p>
                 <p>React Query</p>
                 <p>Redux</p>
                 <p>Redux Toolkit</p>
