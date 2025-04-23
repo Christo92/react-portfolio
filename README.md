@@ -2,6 +2,8 @@
 
 This is my portfolio using various libraries for animations, routing, and styling. My journey is indicated on it.
 
+You can access here: https://myporfoliodev.netlify.app/
+
 ## Technologies and Packages Used
 
 React with `react-dom` (19.0.0)
